@@ -201,7 +201,7 @@ header {
 header .heading-wrapper {
   border-radius: 5px;
   padding: 30px 40px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/web-design.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background-color: #2056a4;
   background-size: cover;
   background-blend-mode: overlay;
@@ -230,7 +230,7 @@ header .downlad-btn {
   float: right;
   margin-top: 30px;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../img/web-design.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
   background-color: #2056a4;
   background-size: cover;
   background-blend-mode: overlay;
@@ -251,7 +251,7 @@ header .downlad-btn:hover {
 .intro-section {
   position: relative;
   padding-top: 250px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/web-design.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background-size: cover;
 }
 @media (max-width: 767px) {
@@ -433,7 +433,7 @@ header .downlad-btn:hover {
 .counter-section {
   position: relative;
   padding: 100px 0;
-  background-image: url("../img/counter-bg.jpg");
+  background-image: url("../imgs/counter-bg.jpg");
   background-size: cover;
   z-index: 1;
   color: #fff;
