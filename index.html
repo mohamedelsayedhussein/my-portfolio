@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="heading-wrapper">
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 mb-md-0 mb-3">
+                        <div class="col-xl-4 col-lg-6 mb-md-0 mb-3">
                             <div class="info">
                                 <i class="icon ion-md-pin"></i>
                                 <div class="right-area">
@@ -34,7 +34,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-md-0 mb-3">
+                        <div class="col-xl-4 col-lg-6 mb-md-0 mb-3">
                             <div class="info">
                                 <i class="icon ion-ios-call"></i>
                                 <div class="right-area">
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mb-md-0 mb-3">
+                        <div class="col-xl-4 col-lg-6 mb-md-0 mb-3">
                             <div class="info">
                                 <i class="icon ion-md-chatboxes"></i>
                                 <div class="right-area">
@@ -68,7 +68,7 @@
                         <div class="intro">
                             <div class="profile-img"><img src="imgs/avatar.png" alt=""></div>
                             <h2><b>Mohamed Elsayed</b></h2>
-                            <h4 class="font-blue">Front-end Developer</h4>
+                            <h4 class="font-blue">{ Front-end Developer }</h4>
                             <hr style='width:150px;margin:.5rem auto 0'>
                             <ul class="information my-5">
                                 <li><b>BORN : </b>January 2, 1984</li>
@@ -333,7 +333,7 @@
         <!-- FOOTER -->
 
         <footer>
-            <p class="copyright text-white"> Copyright © <span><b>2020</b></span> All rights reserved </p>
+            <p class="copyright text-white"> Copyright <span><b>©</b></span> <span><b>2020</b></span> All rights reserved </p>
         </footer>
 
         <!-- FOOTER SCRIPTS -->
@@ -343,13 +343,25 @@
         <script src="numscroller-1.0.js"></script>
 
         <script>
-            $('.chart').easyPieChart({
-                animate: 1000,
-                barColor: '#2056a4',
-                scaleColor: '#2056a4',
-                lineWidth: 5,
-                lineCap: 'circle',
-                trackColor: '#eee',
+            $(window).scroll( function(){
+                $('.chart').each( function(i){
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    if( bottom_of_window > bottom_of_object ){
+                        $('.chart').easyPieChart({
+                        lineWidth: 6,
+                        lineCap: 'square',
+                        barColor: "#22a7f0",
+                        scaleColor: '#22a7f0',
+                        trackColor: '#f7f7f7',
+                        easing: 'easeOutBounce',
+                        animate: 1000,
+                        onStep: function(from, to, percent) {
+                        $(this.el).find('.percent').text(Math.round(percent));
+                            }
+                        });
+                    }
+                });
             });
         </script>
     </body>

@@ -88,7 +88,7 @@ a:focus,
 a:active,
 a:hover {
   text-decoration: none;
-  color: #2056a4;
+  color: #22a7f0;
 }
 
 b {
@@ -119,7 +119,9 @@ span {
 }
 
 .section .heading {
+  display: inline-block;
   margin-bottom: 60px;
+  border-bottom: 1px solid #ea2127;
 }
 
 .section .heading:before {
@@ -129,11 +131,11 @@ span {
   border-radius: 5px;
   margin-bottom: 20px;
   display: block;
-  background: #2056a4;
+  background: #22a7f0;
 }
 
 .font-blue {
-  color: #2056a4;
+  color: #22a7f0;
 }
 
 .font-lite-black {
@@ -157,9 +159,9 @@ header .heading-wrapper {
   border-radius: 5px;
   padding: 30px 40px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
-  background-color: #2056a4;
+  background-color: #22a7f0;
   background-size: cover;
-  background-blend-mode: overlay;
+  background-blend-mode: multiply;
   color: #fff;
 }
 
@@ -186,9 +188,9 @@ header .downlad-btn {
   margin-top: 30px;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
-  background-color: #2056a4;
+  background-color: #22a7f0;
   background-size: cover;
-  background-blend-mode: overlay;
+  background-blend-mode: multiply;
   color: #fff;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -408,5 +410,5 @@ header .downlad-btn:hover {
   color: #000 !important;
 }
 .copyright span {
-  color: #2056a4;
+  color: #22a7f0;
 }
