@@ -142,6 +142,68 @@ span {
   color: #999;
 }
 
+/* scroll to top btn style */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+
+  z-index: 9999999999;
+  text-align: center;
+
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+  background: #fff;
+  mix-blend-mode: difference;
+}
+.scroll-to-top.show {
+  opacity: .8;
+  visibility: visible;
+}
+.scroll-to-top.show:hover {
+  opacity: 1;
+}
+.scroll-to-top.show:hover img {
+  transform: rotate(0);
+}
+.scroll-to-top.show:hover:after {
+  opacity: 0;
+}
+.scroll-to-top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 95%;
+  height: 3px;
+  margin-left: 0.1rem;
+  border-radius: 10px;
+  filter: blur(0.1rem);
+  background: linear-gradient(to right, transparent, #3b3b3b, transparent);
+  transition: all 0.2s linear;
+  mix-blend-mode: multiply;
+}
+.scroll-to-top img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 15px;
+  transform: rotate(-11deg);
+  transform-origin: bottom left;
+  transition: all 0.2s linear;
+}
+
 /* ---------------------------------
 2. HEADER
 --------------------------------- */
@@ -181,7 +243,8 @@ header .info .right-area .my-mail {
   font-size: 0.8rem;
 }
 
-header .downlad-btn {
+header .download-btn {
+  position: relative;
   padding: 10px 20px;
   border-radius: 4px;
   float: right;
@@ -194,11 +257,25 @@ header .downlad-btn {
   color: #fff;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  z-index: 2;
+  overflow: hidden;
 }
 
-header .downlad-btn:hover {
-  -webkit-transform: translateY(-4px);
-  transform: translateY(-4px);
+header .download-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #22a7f0;
+  z-index: 1;
+  transition: all 0.2s linear;
+}
+
+header .download-btn:hover:after {
+  left: 0;
+  opacity: 0.3;
 }
 
 /* ---------------------------------
@@ -211,16 +288,19 @@ header .downlad-btn:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background-size: cover;
 }
+
 @media (max-width: 767px) {
   .intro-section {
     padding-top: 350px;
   }
 }
+
 @media (max-width: 450px) {
   .intro-section {
-    padding-top: 400px;
+    padding-top: 450px;
   }
 }
+
 .intro-section:after {
   content: "";
   width: 100%;
@@ -230,6 +310,7 @@ header .downlad-btn:hover {
   left: 0;
   background: #fff;
 }
+
 .intro {
   position: relative;
   z-index: 2;
@@ -240,6 +321,43 @@ header .downlad-btn:hover {
   box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
   outline: 1px solid #faf9f9;
   outline-offset: -10px;
+}
+
+.intro h1 {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  margin-top: -1.5rem;
+  background: #fff;
+  margin-bottom: 1rem;
+  font-variant: small-caps;
+}
+
+@media (max-width: 575px) {
+  .intro h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+.intro h1:after,
+.intro h1:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: #22a7f0;
+  width: 50%;
+  height: 100%;
+  transform: rotate(3deg);
+  z-index: -1;
+}
+
+.intro h1:before {
+  left: initial;
+  right: -6px;
+  top: initial;
+  bottom: -6px;
 }
 
 .intro .profile-img {
@@ -264,12 +382,13 @@ header .downlad-btn:hover {
   object-fit: cover;
   filter: grayscale(100%);
 }
+
 .intro .information > li {
   display: block;
   margin: 5px 0;
 }
 
-.intro .social-icons > li > a {
+.social-icons > li > a {
   height: 45px;
   line-height: 45px;
   width: 45px;
@@ -280,14 +399,14 @@ header .downlad-btn:hover {
   position: relative;
   margin: 0 5px 5px;
   background: #fff;
-  color: #ea2127;
+  color: #22a7f0;
 }
 
-.intro .social-icons > li > a:hover {
+.social-icons > li > a:hover {
   color: #fff;
 }
 
-.intro .social-icons > li > a:after {
+.social-icons > li > a:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -296,14 +415,14 @@ header .downlad-btn:hover {
   top: 0;
   z-index: -1;
   border-radius: 20px;
-  background: #ea2127;
+  background: #22a7f0;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
 
-.intro .social-icons > li > a:hover:after {
+.social-icons > li > a:hover:after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -356,6 +475,9 @@ header .downlad-btn:hover {
 5. ABOUT SECTION
 --------------------------------- */
 
+.about-section {
+  background: #161730;
+}
 .about-section .box .chart {
   position: relative;
   font-size: 1.2rem;
@@ -364,11 +486,16 @@ header .downlad-btn:hover {
   margin: auto;
 }
 
+.about-section p {
+  color: #a4a4a4;
+}
+
 .about-section .box .chart canvas {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 /* ---------------------------------
 6. COUNTER SECTION
 --------------------------------- */
@@ -378,6 +505,7 @@ header .downlad-btn:hover {
   padding: 100px 0;
   background-image: url("../imgs/counter-bg.jpg");
   background-size: cover;
+  background-position: center;
   z-index: 1;
   color: #fff;
 }
@@ -394,8 +522,8 @@ header .downlad-btn:hover {
 }
 
 @media (max-width: 775px) {
-.counter-section .counter .title {
-  font-size: 1.5rem;
+  .counter-section .counter .title {
+    font-size: 1.5rem;
   }
 }
 
@@ -403,12 +531,50 @@ header .downlad-btn:hover {
 7. FOOTER
 --------------------------------- */
 
-.copyright {
-  text-align: center;
-  padding: 30px 0;
-  background: #fff;
-  color: #000 !important;
+footer {
+  padding: 10px 0;
+  background: #161730;
 }
+
 .copyright span {
   color: #22a7f0;
+}
+
+footer .social-icons {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  footer .social-icons,
+  footer .copyright {
+    text-align: center;
+  }
+  footer .copyright {
+    margin-top: 0.5rem;
+  }
+  footer .social-icons li a {
+    background: #22a7f0;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+  footer .social-icons li a:after {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 575px) {
+  footer .copyright {
+    font-size: 0.9rem;
+  }
+}
+
+footer .social-icons li a {
+  text-align: center;
+  margin-bottom: 0;
+  background: none;
+  border: none;
+  color: #fff;
 }
