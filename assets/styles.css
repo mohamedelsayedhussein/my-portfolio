@@ -521,6 +521,17 @@ header .download-btn:hover:after {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.counter-section .img {
+  width: 65px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.counter-section .img img {
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 775px) {
   .counter-section .counter .title {
     font-size: 1.5rem;
