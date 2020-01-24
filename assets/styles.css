@@ -87,8 +87,8 @@ a {
 a:focus,
 a:active,
 a:hover {
-  text-decoration: none;
-  color: #22a7f0;
+  text-decoration: underline;
+  color: inherit;
 }
 
 b {
