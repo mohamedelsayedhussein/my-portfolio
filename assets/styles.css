@@ -431,9 +431,6 @@ header .download-btn:hover:after {
 4. PORTFOLIO SECTION
 --------------------------------- */
 
-.portfolio-section {
-  padding-bottom: 0;
-}
 .portfolio-section .my-work a.target {
   display: block;
 }
@@ -522,7 +519,7 @@ header .download-btn:hover:after {
 }
 
 .counter-section .img {
-  width: 65px;
+  width: 55px;
   margin: 0 auto 1rem;
   overflow: hidden;
 }
