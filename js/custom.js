@@ -16,4 +16,6 @@ $(document).ready(function () {
             scrollTop: 0
         }, 1000);
     });
+
+    new WOW().init();
 });
