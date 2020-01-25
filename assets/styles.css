@@ -1,3 +1,5 @@
+
+
 /* ---------------------------------
 1. COMMONS FOR PAGE DESIGN
 --------------------------------- */
@@ -7,7 +9,8 @@ html {
   overflow-x: hidden;
   margin: 0px;
   padding: 0px;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 body {
@@ -81,6 +84,7 @@ a {
   text-decoration: none;
   color: inherit;
   -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -159,6 +163,8 @@ span {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   background: #fff;
   mix-blend-mode: difference;
@@ -171,7 +177,9 @@ span {
   opacity: 1;
 }
 .scroll-to-top.show:hover img {
-  transform: rotate(0);
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
 }
 .scroll-to-top.show:hover:after {
   opacity: 0;
@@ -187,8 +195,13 @@ span {
   height: 3px;
   margin-left: 0.1rem;
   border-radius: 10px;
-  filter: blur(0.1rem);
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#3b3b3b), to(transparent));
+  background: -o-linear-gradient(left, transparent, #3b3b3b, transparent);
   background: linear-gradient(to right, transparent, #3b3b3b, transparent);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   mix-blend-mode: multiply;
 }
@@ -196,11 +209,18 @@ span {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 
   border-radius: 15px;
-  transform: rotate(-11deg);
-  transform-origin: bottom left;
+  -webkit-transform: rotate(-11deg);
+      -ms-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -220,6 +240,8 @@ header {
 header .heading-wrapper {
   border-radius: 5px;
   padding: 30px 40px 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../imgs/web-design.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background-color: #22a7f0;
   background-size: cover;
@@ -249,13 +271,17 @@ header .download-btn {
   border-radius: 4px;
   float: right;
   margin-top: 30px;
-  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../imgs/web-design.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
   background-color: #22a7f0;
   background-size: cover;
   background-blend-mode: multiply;
   color: #fff;
   -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   z-index: 2;
   overflow: hidden;
@@ -270,6 +296,8 @@ header .download-btn:after {
   height: 100%;
   background: #22a7f0;
   z-index: 1;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -285,6 +313,8 @@ header .download-btn:hover:after {
 .intro-section {
   position: relative;
   padding-top: 250px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../imgs/web-design.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background-size: cover;
 }
@@ -318,7 +348,8 @@ header .download-btn:hover:after {
   margin-top: 100px;
   text-align: center;
   background: #fff;
-  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
   outline: 1px solid #faf9f9;
   outline-offset: -10px;
 }
@@ -349,7 +380,9 @@ header .download-btn:hover:after {
   background: #22a7f0;
   width: 50%;
   height: 100%;
-  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
   z-index: -1;
 }
 
@@ -361,7 +394,8 @@ header .download-btn:hover:after {
 }
 
 .intro .profile-img {
-  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
   display: block;
   height: 200px;
   width: 200px;
@@ -379,8 +413,10 @@ header .download-btn:hover:after {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .intro .information > li {
@@ -417,14 +453,17 @@ header .download-btn:hover:after {
   border-radius: 20px;
   background: #22a7f0;
   -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   -webkit-transform: scale(0);
-  transform: scale(0);
+  -ms-transform: scale(0);
+      transform: scale(0);
 }
 
 .social-icons > li > a:hover:after {
   -webkit-transform: scale(1);
-  transform: scale(1);
+  -ms-transform: scale(1);
+      transform: scale(1);
 }
 
 /* ---------------------------------
@@ -443,6 +482,8 @@ header .download-btn:hover:after {
   width: 100%;
   height: 250px;
   margin-bottom: 3rem;
+  -webkit-transition: all 4s linear;
+  -o-transition: all 4s linear;
   transition: all 4s linear;
 }
 .portfolio-section .my-work .fluidbox__wrap:before,
@@ -456,11 +497,16 @@ header .download-btn:hover:after {
   top: 80%;
   max-width: 300px;
   background: transparent;
-  box-shadow: 0 15px 10px #777;
-  transform: rotate(-5deg);
+  -webkit-box-shadow: 0 15px 10px #777;
+          box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 .portfolio-section .my-work .fluidbox__wrap:after {
-  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
   right: 10px;
   left: auto;
 }
@@ -526,7 +572,8 @@ header .download-btn:hover:after {
 
 .counter-section .img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 775px) {
@@ -569,7 +616,9 @@ footer .social-icons {
     line-height: 35px;
   }
   footer .social-icons li a:after {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -591,14 +640,25 @@ footer .social-icons li a {
 /* SCROLL ANIMATION STUFF */
 
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 /* FADE IN LEFT */
 
 .fadeIn {
-  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
   0% {
@@ -612,81 +672,156 @@ footer .social-icons li a {
 /* FADE IN LEFT */
 
 .fadeInLeft {
-  animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-40px);
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 /* FADE IN RIGHT */
 
 .fadeInRight {
-  animation-name: fadeInRight;
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 /* FADE IN UP */
 
 .fadeInUp {
-  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 /* FADE IN DOWN */
 
 .fadeInDown {
-  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 /* ROLL IN */
 
 .rollIn {
-  animation-name: rollIn;
+  -webkit-animation-name: rollIn;
+          animation-name: rollIn;
 }
-@keyframes rollIn {
+@-webkit-keyframes rollIn {
   from {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
   }
 
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
 
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
