@@ -167,6 +167,8 @@ span {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   background: #fff;
+  -webkit-mix-blend-mode: difference;
+  -moz-mix-blend-mode: difference;
   mix-blend-mode: difference;
 }
 .scroll-to-top.show {
@@ -350,8 +352,6 @@ header .download-btn:hover:after {
   background: #fff;
   -webkit-box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
           box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.1), -10px -10px 80px -20px rgba(0, 0, 0, 0.1);
-  outline: 1px solid #faf9f9;
-  outline-offset: -10px;
 }
 
 .intro h1 {
