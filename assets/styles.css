@@ -1,5 +1,7 @@
 
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+
 /* ---------------------------------
 1. COMMONS FOR PAGE DESIGN
 --------------------------------- */
@@ -125,7 +127,7 @@ span {
 .section .heading {
   display: inline-block;
   margin-bottom: 60px;
-  border-bottom: 1px solid #ea2127;
+  border-bottom: 1px solid #f39c12;
 }
 
 .section .heading:before {
@@ -135,11 +137,11 @@ span {
   border-radius: 5px;
   margin-bottom: 20px;
   display: block;
-  background: #22a7f0;
+  background: #f39c12;
 }
 
 .font-blue {
-  color: #22a7f0;
+  color: #161730;
 }
 
 .font-lite-black {
@@ -245,7 +247,7 @@ header .heading-wrapper {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../imgs/web-design.jpg");
   background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
-  background-color: #22a7f0;
+  background-color: #454546;
   background-size: cover;
   background-blend-mode: multiply;
   color: #fff;
@@ -302,7 +304,7 @@ header .download-btn:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #22a7f0;
+  background: #f39c12;
   z-index: 1;
   transform: rotateX(-20deg) skewY(-20deg);
   -webkit-transition: all 0.2s linear;
@@ -367,6 +369,7 @@ header .download-btn:hover:after {
   display: inline-block;
   padding: 1rem;
   margin-top: -1.5rem;
+  color: #161730;
   background: #fff;
   margin-bottom: 1rem;
   font-variant: small-caps;
@@ -385,7 +388,7 @@ header .download-btn:hover:after {
   position: absolute;
   top: -6px;
   left: -6px;
-  background: #22a7f0;
+  background: #f39c12;
   width: 50%;
   height: 100%;
   -webkit-transform: rotate(3deg);
@@ -443,7 +446,7 @@ header .download-btn:hover:after {
   position: relative;
   margin: 0 5px 5px;
   background: #fff;
-  color: #22a7f0;
+  color: #f39c12;
 }
 
 .social-icons > li > a:hover {
@@ -459,7 +462,7 @@ header .download-btn:hover:after {
   top: 0;
   z-index: -1;
   border-radius: 20px;
-  background: #22a7f0;
+  background: #f39c12;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -532,13 +535,19 @@ header .download-btn:hover:after {
 .about-section .box .chart {
   position: relative;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   width: 100%;
   margin: auto;
 }
 
 .about-section p {
   color: #a4a4a4;
+}
+
+.about-section h6.label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 .about-section .box .chart canvas {
@@ -569,7 +578,17 @@ header .download-btn:hover:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.counter-section .counter .title {
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.counter-section .counter .desc {
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .counter-section .img {
@@ -596,7 +615,7 @@ header .download-btn:hover:after {
 
 footer {
   padding-top: 1rem;
-  background: #24A4EB;
+  background: #202146;
 }
 
 footer .shape-footer {
@@ -612,11 +631,18 @@ footer .shape-footer:after {
   top: 0;
   width: 85px;
   height: 30px;
-  background: #24A4EB;
+  background: #202146;
   transform: skew(-40deg);
 }
+
+footer .copyright {
+  font-size: .9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
 .copyright span {
-  color: #22a7f0;
+  color: #f39c12;
 }
 
 footer .social-icons {
@@ -633,7 +659,7 @@ footer .social-icons {
     margin-top: 0.5rem;
   }
   footer .social-icons li a {
-    background: #22a7f0;
+    background: #f39c12;
     color: #fff;
     width: 35px;
     height: 35px;

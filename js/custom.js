@@ -15,9 +15,9 @@ $(document).ready(function () {
                 $('.chart').easyPieChart({
                     lineWidth: 6,
                     lineCap: 'square',
-                    barColor: "#22a7f0",
-                    scaleColor: '#22a7f0',
-                    trackColor: '#555',
+                    barColor: "#FF9C1B",
+                    scaleColor: '#FF9C1B',
+                    trackColor: '#444',
                     easing: 'easeOutBounce',
                     animate: 2500,
                     onStep: function (from, to, percent) {
