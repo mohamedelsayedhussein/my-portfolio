@@ -269,43 +269,51 @@ header .info .right-area .my-mail {
 
 header .download-btn {
   position: relative;
-  padding: 10px 20px;
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   border-radius: 4px;
   float: right;
   margin-top: 30px;
   -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../imgs/web-design.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../imgs/web-design.jpg");
-  background-color: #22a7f0;
-  background-size: cover;
-  background-blend-mode: multiply;
+  background: #161730;
   color: #fff;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  z-index: 2;
   overflow: hidden;
 }
-
+header .download-btn span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
 header .download-btn:after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
+  top: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: #22a7f0;
   z-index: 1;
+  transform: rotateX(-20deg) skewY(-20deg);
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
 header .download-btn:hover:after {
-  left: 0;
-  opacity: 0.3;
+  transform: rotateX(0) skewY(0);
+  top: 0;
+  /* opacity: 0.3; */
 }
 
 /* ---------------------------------
@@ -587,10 +595,26 @@ header .download-btn:hover:after {
 --------------------------------- */
 
 footer {
+  padding-top: 1rem;
+  background: #24A4EB;
+}
+
+footer .shape-footer {
+  position: relative;
   padding: 10px 0;
   background: #161730;
 }
 
+footer .shape-footer:after {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  width: 85px;
+  height: 30px;
+  background: #24A4EB;
+  transform: skew(-40deg);
+}
 .copyright span {
   color: #22a7f0;
 }
