@@ -303,7 +303,7 @@ header .download-btn:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #fff;
   z-index: 1;
   transform: rotateX(-30deg) skewY(-20deg);
   -webkit-transition: all 0.3s linear;
