@@ -27,7 +27,9 @@ body {
   word-wrap: break-word;
   color: #333;
 }
-
+*:focus {
+  outline: none;
+}
 h2,
 h3,
 h4,
@@ -141,7 +143,7 @@ span {
 }
 
 .font-blue {
-  color: #161730;
+  color: #111;
 }
 
 .font-lite-black {
@@ -169,9 +171,9 @@ span {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   background: #fff;
-  -webkit-mix-blend-mode: difference;
-  -moz-mix-blend-mode: difference;
-  mix-blend-mode: difference;
+  -webkit-mix-blend-mode: overlay;
+  -moz-mix-blend-mode: overlay;
+  mix-blend-mode: overlay;
 }
 .scroll-to-top.show {
   opacity: 0.8;
@@ -281,11 +283,8 @@ header .download-btn {
   margin-top: 30px;
   -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
-  background: #161730;
+  background: #242424;
   color: #fff;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   overflow: hidden;
 }
 header .download-btn span {
@@ -300,13 +299,27 @@ header .download-btn span {
 header .download-btn:after {
   content: "";
   position: absolute;
-  top: -100%;
+  top: calc(-100% - 1.5rem);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  z-index: 1;
+  transform: rotateX(-30deg) skewY(-20deg);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+header .download-btn:before {
+  content: "";
+  position: absolute;
+  top: calc(-100% - 1.5rem);
   left: 0;
   width: 100%;
   height: 100%;
   background: #f39c12;
-  z-index: 1;
-  transform: rotateX(-20deg) skewY(-20deg);
+  z-index: 2;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -315,7 +328,10 @@ header .download-btn:after {
 header .download-btn:hover:after {
   transform: rotateX(0) skewY(0);
   top: 0;
-  /* opacity: 0.3; */
+} 
+header .download-btn:hover:before {
+  top: 0;
+  transition-delay: .26s;
 }
 
 /* ---------------------------------
@@ -369,7 +385,7 @@ header .download-btn:hover:after {
   display: inline-block;
   padding: 1rem;
   margin-top: -1.5rem;
-  color: #161730;
+  color: #111;
   background: #fff;
   margin-bottom: 1rem;
   font-variant: small-caps;
@@ -530,7 +546,7 @@ header .download-btn:hover:after {
 --------------------------------- */
 
 .about-section {
-  background: #161730;
+  background: #111;
 }
 .about-section .box .chart {
   position: relative;
@@ -615,13 +631,13 @@ header .download-btn:hover:after {
 
 footer {
   padding-top: 1rem;
-  background: #202146;
+  background: #090909;
 }
 
 footer .shape-footer {
   position: relative;
   padding: 10px 0;
-  background: #161730;
+  background: #111;
 }
 
 footer .shape-footer:after {
@@ -631,7 +647,7 @@ footer .shape-footer:after {
   top: 0;
   width: 85px;
   height: 30px;
-  background: #202146;
+  background: #090909;
   transform: skew(-40deg);
 }
 

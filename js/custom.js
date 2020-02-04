@@ -3,7 +3,7 @@ $(document).ready(function () {
     // scroll to top button script
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 150) {
+        if ($(this).scrollTop() > 350) {
             $('.scroll-to-top').addClass('show');
         } else {
             $('.scroll-to-top').removeClass('show');
