@@ -170,17 +170,10 @@ span {
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  background: #fff;
-  -webkit-mix-blend-mode: overlay;
-  -moz-mix-blend-mode: overlay;
-  mix-blend-mode: overlay;
 }
 .scroll-to-top.show {
-  opacity: 0.8;
-  visibility: visible;
-}
-.scroll-to-top.show:hover {
   opacity: 1;
+  visibility: visible;
 }
 .scroll-to-top.show:hover img {
   -webkit-transform: rotate(0);
@@ -209,7 +202,6 @@ span {
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  mix-blend-mode: multiply;
 }
 .scroll-to-top img {
   display: block;
@@ -292,6 +284,8 @@ header .download-btn span {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: 'Montserrat', sans-serif;
+
   width: 100%;
   height: 100%;
   z-index: 5;
@@ -341,10 +335,11 @@ header .download-btn:hover:before {
 .intro-section {
   position: relative;
   padding-top: 250px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../imgs/web-design.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/web-design.jpg");
+  background: -webkit-gradient(linear ,left top, left bottom ,from(rgba(255,255,255,.5)), to(rgba(0,0,0,.4))), url("../imgs/web-design.jpg");
+  background: -o-linear-gradient(top ,rgba(255,255,255,.5), rgba(0,0,0,.4)), url("../imgs/web-design.jpg");
+  background: linear-gradient(to bottom ,rgba(255,255,255,.5), rgba(0,0,0,.4)), url("../imgs/web-design.jpg");
   background-size: cover;
+  background-position: bottom;
 }
 
 @media (max-width: 767px) {
@@ -579,9 +574,9 @@ header .download-btn:hover:before {
 .counter-section {
   position: relative;
   padding: 100px 0;
-  background-image: url("../imgs/counter-bg.jpg");
+  background-image: url("../imgs/web-design.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   z-index: 1;
   color: #fff;
 }
@@ -600,10 +595,11 @@ header .download-btn:hover:before {
 .counter-section .counter .title {
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
+  color: #f39c12;
 }
 
 .counter-section .counter .desc {
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -631,13 +627,13 @@ header .download-btn:hover:before {
 
 footer {
   padding-top: 1rem;
-  background: #090909;
+  background: #111;
 }
 
 footer .shape-footer {
   position: relative;
   padding: 10px 0;
-  background: #111;
+  background: #090909;
 }
 
 footer .shape-footer:after {
@@ -647,7 +643,7 @@ footer .shape-footer:after {
   top: 0;
   width: 85px;
   height: 30px;
-  background: #090909;
+  background: #111;
   transform: skew(-40deg);
 }
 
