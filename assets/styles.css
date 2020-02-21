@@ -541,9 +541,7 @@ header .info .right-area .my-mail {
 .portfolio-section .custom-btn {
   float: none;
   margin: auto;
-}
-.portfolio-section .custom-btn span {
-  color: #fff;
+  cursor: pointer;
 }
 .portfolio-section #loadMore.noMore {
   text-decoration: line-through;
