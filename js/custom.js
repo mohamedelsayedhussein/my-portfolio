@@ -35,5 +35,15 @@ $(document).ready(function () {
         }, 1000);
     });
 
-    new WOW().init();
+    $(".my-work").slice(0, 6).show();
+    $("#loadMore").on("click", function (e) {
+        e.preventDefault();
+        $(".my-work:hidden").slice(0, 3).slideDown(500);
+        if ($(".my-work:hidden").length == 0) {
+            $("#loadMore").text("No More").addClass("noMore");
+        }
+    });
+
 });
+
+new WOW().init();

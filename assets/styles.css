@@ -263,7 +263,7 @@ header .info .right-area .my-mail {
   font-size: 0.8rem;
 }
 
-header .download-btn {
+.custom-btn {
   position: relative;
   display: block;
   width: 150px;
@@ -276,10 +276,10 @@ header .download-btn {
   -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
   background: #242424;
-  color: #fff;
   overflow: hidden;
 }
-header .download-btn span {
+.custom-btn span {
+  color: #fff;
   display: block;
   position: absolute;
   top: 0;
@@ -290,7 +290,7 @@ header .download-btn span {
   height: 100%;
   z-index: 5;
 }
-header .download-btn:after {
+.custom-btn:after {
   content: "";
   position: absolute;
   top: calc(-100% - 1.5rem);
@@ -305,7 +305,7 @@ header .download-btn:after {
   transition: all 0.3s linear;
 }
 
-header .download-btn:before {
+.custom-btn:before {
   content: "";
   position: absolute;
   top: calc(-100% - 1.5rem);
@@ -319,11 +319,11 @@ header .download-btn:before {
   transition: all 0.2s linear;
 }
 
-header .download-btn:hover:after {
+.custom-btn:hover:after {
   transform: rotateX(0) skewY(0);
   top: 0;
 } 
-header .download-btn:hover:before {
+.custom-btn:hover:before {
   top: 0;
   transition-delay: .26s;
 }
@@ -492,6 +492,9 @@ header .download-btn:hover:before {
 4. PORTFOLIO SECTION
 --------------------------------- */
 
+.portfolio-section .my-work {
+  display: none;
+}
 .portfolio-section .my-work a.target {
   display: block;
 }
@@ -535,7 +538,18 @@ header .download-btn:hover:before {
 .portfolio-section .my-work .fluidbox__wrap:hover {
   background-position: left bottom;
 }
-
+.portfolio-section .custom-btn {
+  float: none;
+  margin: auto;
+}
+.portfolio-section .custom-btn span {
+  color: #fff;
+}
+.portfolio-section #loadMore.noMore {
+  text-decoration: line-through;
+  background: #777;
+  cursor: not-allowed;
+}
 /* ---------------------------------
 5. ABOUT SECTION
 --------------------------------- */
