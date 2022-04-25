@@ -19,7 +19,7 @@ $(document).ready(function () {
                     scaleColor: '#FF9C1B',
                     trackColor: '#444',
                     easing: 'easeOutBounce',
-                    animate: 2500,
+                    animate: 1000,
                     onStep: function (from, to, percent) {
                         $(this.el).find('.percent').text(Math.round(percent));
                     }
