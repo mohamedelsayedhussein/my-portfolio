@@ -236,7 +236,7 @@ header {
 
 header .heading-wrapper {
   border-radius: 5px;
-  padding: 30px 40px 20px;
+  padding: 2rem 1rem;
   background: -webkit-gradient(
       linear,
       left top,
@@ -253,21 +253,37 @@ header .heading-wrapper {
   background-size: cover;
   background-blend-mode: multiply;
   color: #fff;
+  width: min(1250px, 95%);
+  margin: auto;
 }
 
 header .info {
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
-header .info .icon {
-  font-size: 30px;
+@media (max-width: 575px) {
+  header .info {
+    font-size: 14px;
+    gap: 5px;
+  }
 }
 
-header .info .right-area .my-mail {
-  font-size: 0.8rem;
+header .info svg.icon {
+  flex-shrink: 0;
+  width: 30px;
+}
+
+@media (max-width: 575px) {
+  header .info svg.icon {
+    width: 20px;
+  }
+}
+
+header .info h5 {
+  word-break: break-word;
 }
 
 .custom-btn {
